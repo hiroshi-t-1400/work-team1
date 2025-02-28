@@ -19,7 +19,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('role')->unsigned();
+            $table->tinyInteger('role')->default(0)->index('index_role')->unsigned()->comment('権限ロール:0-1、1:権限者');
             //
         });
     }
