@@ -1,0 +1,44 @@
+/* ToDo:１つのstyle.cssにまとめたい */
+
+/* 文字を斜体にする-01 */
+@font-face {
+    font-family: Meiryo, "メイリオ", Arial;
+    src: local(Meiryo), local("メイリオ"), local(Arial);
+}
+/* 文字を斜体にする-02 */
+.italic {
+    font-family: Meiryo, "メイリオ", Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+/* ログイン画面、アカウント登録画面の全体を中央寄せにする */
+.auth-wrapper {
+    margin: 5rem auto;
+    width: 500px;
+}
+/* ログインのformタグ */
+.login-form-erea { }
+/* ログインフォームのinputタグ */
+.login-form input {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+/* ログインフォームのチェックボックス */
+.login-form .chk {
+    width: auto;
+}
+/* ログインフォームの"管理者"のラベル文字 */
+.login-form .role-label {
+    padding-left: 1rem;
+}
+/* ログインフォームのボタンと"登録"がある部分 */
+.btn-erea {
+    margin: 0 auto; /* 上下の余白を０、左右の余白を自動autoで真ん中へ */
+    display: flex; /* 中にあるものを横並びに */
+    justify-content: center; /* ??ToDo:不要かも？確認する */
+}
+/* ログインフォームのボタン */
+.btn-erea button {}
+/* ログインフォームの"登録"の文字 */
+.btn-erea a {
+    margin-left: 2rem; /* ボタンから少し間隔を開ける */
+}
