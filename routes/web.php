@@ -43,3 +43,13 @@ Route::get('/home', function() {
 Route::get('/tsukimori.user-register', [UserRegisterController::class, 'showUserRegister'])->name('showUserRegister');
 // アカウント作成コントローラ呼び出し
 Route::post('/tsukimori.user-register', [UserRegisterController::class, 'UserRegister'])->name('UserRegister');
+
+// ログイン画面を表示する
+Route::get('/login', function () {
+    return view('/tsukimori.login');
+})->name('login');
+
+// ログイン画面でログインボタンを押したらログイン認証用のコントローラーを呼び出す
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+// ログアウトボタンを押したらログイン認証用のコントローラーを呼び出してログアウトする
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
