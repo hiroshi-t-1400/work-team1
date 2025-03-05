@@ -1,14 +1,18 @@
 /* ToDo:１つのstyle.cssにまとめたい */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
 /* 文字を斜体にする-01 */
 @font-face {
-    font-family: Meiryo, "メイリオ", Arial;
-    src: local(Meiryo), local("メイリオ"), local(Arial);
+    font-family: Meiryo;
+    src: local(Meiryo), local("メイリオ");
 }
 /* 文字を斜体にする-02 */
 .italic {
-    font-family: Meiryo, "メイリオ", Arial, Helvetica, sans-serif;
+    /* font-family: Noto Sans JP; */
+    font-family: Meiryo, Noto Sans JP;
     font-style: italic;
+    text-align: center;
 }
 /* ログイン画面、アカウント登録画面の全体を中央寄せにする */
 .auth-wrapper {
@@ -41,4 +45,55 @@
 /* ログインフォームの"登録"の文字 */
 .btn-erea a {
     margin-left: 2rem; /* ボタンから少し間隔を開ける */
+}
+
+
+/* サイドバー用CSS */
+.side-container {
+    width: 200px;
+    /* background-color: bisque; */
+}
+
+.side-wrapper {
+    width: 200px;
+    margin-left: 0.5rem;
+    background-color: antiquewhite;
+    padding: 1rem 0rem;
+}
+
+.side-user-show {
+    margin: .5rem 0 1rem .5rem;
+    padding: 0.5rem;
+}
+.side-user-name {
+    font-weight: bolder;
+}
+
+.side-page-list {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: -2rem;
+}
+.side-page-list ul {
+    list-style: none;
+}
+.side-page-list ul li {}
+.side-page-list ul .branch {
+    padding-left: 0.5rem;
+}
+
+.side-back-home-link {
+    display: inline-block;
+    width: 7rem;
+    background-color: orange;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.side-logout-btn {
+    /* align-items: center; */
+    display: block;
+    width: 8rem;
+    height: 2rem;
 }
