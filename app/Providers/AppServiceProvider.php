@@ -20,8 +20,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // 
+        Paginator::useBootstrapFive();
+        Paginator::useBootstrapFour();
+        if(\App::environment(['production']) || \App::environment(['develop'])){
+            \URL::forcseScheme('https');
+        }
+
+
     }
-
-
 }
